@@ -10,6 +10,11 @@
         type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale-1">
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_vanqZMkpPOADQP2iEpqKS");
+        })();
+    </script>
 </head>
 
 <body>
@@ -62,7 +67,7 @@
                 <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
                 <h5 class="uppercase text-center">Let's work together</h5>
             </div>
-            <div class="center-form">
+            <form onsubmit="return sendMail(this);">
                 <form>
                     <input type="text" name="name" class="form-control" id="fullname" placeholder="Name" required />
                     <input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="Email"
@@ -71,7 +76,7 @@
                         placeholder="Project Description" required></textarea>
                     <button type="submit" class="btn btn-secondary center-block">Send Project Request</button>
                 </form>
-            </div>
+        </div>
         </div>
     </section>
     <footer class="container-fluid ">
@@ -104,6 +109,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
